@@ -1,23 +1,25 @@
 class parttime{
    public static void main(String args[]){
       int ispresent=1;
-		int isparttime=2;
-      double empCheck=Math.floor(Math.random()*3);
+		int ispartime=2;
       int wageperhour=20;
 
-   if(ispresent==empCheck){
-      int fulltime=16;
-      double dailywage=wageperhour*fulltime;
-      System.out.println(dailywage);
+      int empHrs=0;
+      int empwage=0;
+
+      double empCheck=Math.floor(Math.random()*3);
+
+
+   if(empCheck==ispresent){
+      empHrs=8;
    }
-	else if(isparttime==empCheck){
-	   int parttime=8;
-      double dailywage=wageperhour*parttime;
-      System.out.println(dailywage);
+	else if(empCheck==ispartime){
+		empHrs=4;
 	}
    else
-
-      System.out.println("Employee is Absent");
+      empHrs=0;
+      empwage=wageperhour*empHrs;
+      System.out.println("Empwage :" +empwage);
    }
 }
 
