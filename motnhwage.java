@@ -1,26 +1,32 @@
-	class monthwage{
-   public static void main(String[] args){
-      int wageperhour=20;
-		int workdaypermonth=20;
-      int empCheck=(int)(Math.floor(Math.random()*3));
+public class motnhwage{
+   public static final int ispresent=1;
+   public static final int ispartime=2;
+   public static final int wageperhour=20;
+	public static final int num_of_wrk_days=2;
 
-      switch(empCheck) {
-      case 1:
-      int fulltime=16;
-      int dailywag=wageperhour*fulltime*workdaypermonth;
-      System.out.println("Full time salry is :" +dailywag);
-      break;
+   public static void main(String args[]){
+      int empHrs=0;
+      int empwage=0;
+		int totalEmpwage=0;
 
-      case 2:
-      int parttime=8;
-      int dalywage=wageperhour*parttime*workdaypermonth;
-      System.out.println("Parttime salary is :" +dalywage);
-      break;
+	for(int day=0;day < num_of_wrk_days;day++){
 
-      default:
-      int dilywage=wageperhour*0;
-      System.out.println(dilywage);
-     }
-  }
+      int empCheck=(int) Math.floor(Math.random()*3);
+	  switch (empCheck){
+		   case ispresent:
+      	empHrs=8;
+      	break;
+   		case ispartime:
+      	empHrs=4;
+      	break;
+   		default:
+      	empHrs=0;
+   	}
+      empwage=wageperhour*empHrs;
+   	totalEmpwage += empwage;
+	   System.out.println("Empwage :" +empwage);
+	}
+	System.out.println("Total empwage :" + totalEmpwage);
 }
 
+}
