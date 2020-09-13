@@ -19,7 +19,7 @@ public class Empcase{
 		break;
    default:
       empHrs=0;
-	}
+  }
       empwage=wageperhour*empHrs;
       System.out.println("Empwage :" +empwage);
    }
