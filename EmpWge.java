@@ -1,18 +1,22 @@
 public class EmpWge{
    public static void main(String args[]){
       int ispresent=1;
-      double empCheck=Math.floor(Math.random()*2);
 		int wageperhour=20;
 
-   if(ispresent==empCheck){
-		int fullday=8;
-		double dailywage=wageperhour*fullday;
-      System.out.println(dailywage);
-   }
-   else
+		int empHrs=0;
+		int empwage=0;
 
-      System.out.println("Employee is Absent");
-   }
+		double empCheck=Math.floor(Math.random()*2);
+
+
+   if(empCheck==ispresent){
+		empHrs=8;
+	}
+	else
+		empHrs=0;
+		empwage=wageperhour*empHrs;
+      System.out.println("Empwage :" +empwage);
+	}
 }
 
 
